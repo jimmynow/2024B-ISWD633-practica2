@@ -20,17 +20,33 @@ docker run -d --name nginx-container -e username=jimmy -e role=admin nginx:alpin
 ![Imagen](img/comprobacionvariablesentorno.png)
 
 ### Crear un contenedor con mysql:8 , mapear todos los puertos
-# COMPLETAR
-
+```
+docker run -d --name mysql-container -p 3306:3306 mysql:8
+se usa este puerto ya que es el predeterminado de mysql
+```
 ### ¿El contenedor se está ejecutando?
-# COMPLETAR
+```
+docker ps
+No, el contenedor no se encuentra en ejecución
+```
 
 ### Identificar el problema
-# COMPLETAR
-
+```
+El problema es que no se ha especificado la variable de entorno "MYSQL-ROOT_PASSWORD"
+docker logs mysql-container
+2024-10-25 17:08:51+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.4.3-1.el9 started.
+2024-10-25 17:08:52+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2024-10-25 17:08:52+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.4.3-1.el9 started.
+2024-10-25 17:08:52+00:00 [ERROR] [Entrypoint]: Database is uninitialized and password option is not specified
+    You need to specify one of the following as an environment variable:
+    - MYSQL_ROOT_PASSWORD
+    - MYSQL_ALLOW_EMPTY_PASSWORD
+    - MYSQL_RANDOM_ROOT_PASSWORD
+```
 ### Eliminar el contenedor creado con mysql:8 
-# COMPLETAR
-
+```
+docker rm -f mysql-container
+```
 ### Para crear un contenedor con variables de entorno especificadas
 - Portabilidad: Las aplicaciones se vuelven más portátiles y pueden ser desplegadas en diferentes entornos (desarrollo, pruebas, producción) simplemente cambiando el archivo de variables de entorno.
 - Centralización: Todas las configuraciones importantes se centralizan en un solo lugar, lo que facilita la gestión y auditoría de las configuraciones.
