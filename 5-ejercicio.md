@@ -2,8 +2,9 @@
 ![Imagen](img/esquema-ejercicio5.PNG)
 
 ### Crear la red
-# COMPLETAR
-
+´´´
+docker network create network
+´´´
 ### Crear el contenedor mysql a partir de la imagen mysql:8, configurar las variables de entorno necesarias
 # COMPLETAR
 
