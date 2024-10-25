@@ -85,4 +85,17 @@ PS C:\Users\jmm\Desktop\PRACTICA_2_EVOLUCION\2024B-ISWD633-practica2> docker
 ![Imagen](img/mysqlprintenv.png)
 
 ### ¿Qué bases de datos existen en el contenedor creado?
-# COMPLETAR
+```
+exec -it mysql-container mysql -u root -p
+SE INGRESA LA CONTRASEÑA: jimmy
+SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+Estas son las bases de datos existentes.
+```
