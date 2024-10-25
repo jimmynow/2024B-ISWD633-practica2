@@ -105,6 +105,7 @@ docker exec -it <nombre contenedor> <programa o comando>
 ```
 PS C:\Users\jmm> docker exec -it jenkins sh
 / $ cat /var/jenkins_home/secrets/initialAdminPassword
+7976ad401b044cc692a50c4cfd80ed76
 ```
 ![Imagen](img/loginjenkins.png)
 
