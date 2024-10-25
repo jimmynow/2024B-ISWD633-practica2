@@ -53,7 +53,9 @@ docker network ls
 
 # COLOCAR UNA(S) CAPTURAS(S) DE LOS CONTENEDORES CREADOS EN DONDE SE EVIDENCIE A QUÉ RED ESTÁN VINCULADOS
 ![Imagen](img/imgnetwork-bridge.png)
+
 ![Imagen](img/imgcontainer1.png)
+
 ![Imagen](img/imgcontainer2.png)
 ### Para eliminar las redes creadas
 ```
