@@ -32,12 +32,24 @@ Para obtener la contraseña solicitada es necesario ingresar al contenedor.
 ```
 docker exec <nombre contenedor> <comando> <argumentos opcionales>
 ```
+```
+docker exec -it jenkins /bin/bash # abre una shell de bash dentro del contenedor jenkins
+```
 # COMPLETAR
 ### ¿Para qué se usa el comando ls?
+```
+-Para mostrar una lista, puede ser de servicios, imagenes, redes, y contenedores.
+-Esto funciono como un comando equivalente a "docker ps" en el caso de contenedores o "docker images", depende de que sea lo que se desea listar.
+-Si se ejecuta dentro de un contenedor temporal a partir de la imagen "jenkins/jenkins" lista los archivos y directorios en el directorio raiz del contenedor.
+```
 ### ¿Para qué sirve el argumento -l junto al comando ls?
+```
+-ls -l es similar al primer comando, pero proporciona información adicional sobre cada archivo o directorio, como los permisos, números de enlaces, el propietario,
+grupo, tamaño y fecha de última modificación.
+```
 ### Usar el contenedor de jenkins creado previamente y ejecutar el comando ls con el argumento -l
-# COMPLETAR
-# COLOCAR UNA CAPTURA DE PANTALLA
+
+![Imagen](img/lsjenkins.png)
 
 ### Para ejecutar un shell interactivo en un contenedor de Docker especificado.
 El comando **docker exec** te permite acceder a la sesión shell de un contenedor en ejecución, estarás dentro del contenedor y podrás ejecutar comandos como si estuvieras en una terminal normal. 
